@@ -1,5 +1,5 @@
 // typing
-const text = "Java • SQL • System Design • Exploring AI/ML";
+const text = "Java • SQL • Backend Systems • Exploring AI/ML";
 let i = 0;
 
 function type() {
@@ -11,11 +11,12 @@ function type() {
 }
 type();
 
-// modal
+// modal open
 function openModal() {
   document.getElementById("modal").style.display = "block";
 }
 
+// modal close
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
