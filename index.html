@@ -3,14 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Satyam Mohanty | Portfolio</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
-  <h2>Satyam</h2>
+  <h2 class="logo">Satyam</h2>
   <ul>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -18,34 +20,45 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <h1>I build real-world backend systems.</h1>
+    <h1>Building Systems, Not Just Code</h1>
     <p id="typing"></p>
 
     <div class="buttons">
-      <a href="#projects" class="btn">View Projects</a>
+      <a href="#projects" class="btn">View Work</a>
       <a href="#contact" class="btn-outline">Contact</a>
     </div>
   </div>
 
-  <img src="images/profile.jpg" class="profile">
+  <div class="hero-img">
+    <img src="images/profile.jpg" alt="profile">
+  </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="projects-grid">
+  <div class="projects-container">
 
-    <div class="card" onclick="openModal()">
+    <div class="card reveal" onclick="openModal()">
       <img src="images/project1.png">
       <h3>Student Management System</h3>
-      <p>Java • JDBC • MySQL</p>
+      <p>Java • JDBC • MySQL • Swing</p>
+
+      <ul>
+        <li>✔ CRUD operations</li>
+        <li>✔ Attendance system</li>
+        <li>✔ Enrollment logic</li>
+      </ul>
     </div>
 
-    <div class="card coming">
+    <div class="card reveal coming">
       <h3>Next Project</h3>
-      <p>Coming soon</p>
+      <p>AI / ML based system</p>
+      <span>Coming Soon</span>
     </div>
 
   </div>
@@ -53,43 +66,48 @@
 
 <!-- MODAL -->
 <div id="modal" class="modal">
-  <div class="modal-box">
-    <span onclick="closeModal()" class="close">&times;</span>
-
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
     <h2>Student Management System</h2>
-    <p>Full CRUD system with attendance and DB design.</p>
-
-    <a href="https://github.com/satyam2405150/student-management-system" target="_blank">
-      View GitHub →
-    </a>
+    <p>Full desktop system with database integration using Java + MySQL.</p>
+    <a href="https://github.com/satyam2405150" target="_blank">View GitHub</a>
   </div>
 </div>
 
+<!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
-
-  <div class="skills">
+  <div class="skills-container reveal">
     <span>Java</span>
     <span>C++</span>
     <span>DSA</span>
     <span>SQL</span>
+    <span>JDBC</span>
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
 
-  <form action="https://formspree.io/f/xdapzpez" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Message"></textarea>
-    <button type="submit">Send</button>
-  </form>
+  <div class="contact-card reveal">
+    <p>Email: satyammohanty381@gmail.com</p>
+    <p><a href="https://github.com/satyam2405150">GitHub</a></p>
+    <p><a href="https://www.linkedin.com/in/satyammohantyy/">LinkedIn</a></p>
+
+    <form action="https://formspree.io/f/xdapzpez" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </section>
 
 <script src="script.js"></script>
+
 </body>
 </html>
