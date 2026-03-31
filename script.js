@@ -1,4 +1,4 @@
-// typing
+// typing effect
 const text = "Java • SQL • System Design • Exploring AI/ML";
 let i = 0;
 
@@ -10,15 +10,6 @@ function type() {
   }
 }
 type();
-
-// smooth scroll
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href"))
-      .scrollIntoView({ behavior: "smooth" });
-  });
-});
 
 // reveal animation
 const reveals = document.querySelectorAll(".reveal");
@@ -32,11 +23,27 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// modal
-function openModal() {
-  document.getElementById("modal").style.display = "block";
-}
+// MODAL LOGIC
+const card = document.getElementById("projectCard");
+const modal = document.getElementById("modal");
+const closeBtn = document.querySelector(".close");
 
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
+card.addEventListener("click", () => {
+  modal.style.display = "block";
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    modal.style.display = "none";
+  }
+});
