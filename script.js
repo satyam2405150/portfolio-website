@@ -1,12 +1,12 @@
 // typing
-const text = "Java Developer • Backend Systems • AI/ML Explorer";
+const text = "Java • SQL • System Design • Exploring AI/ML";
 let i = 0;
 
 function type() {
   if (i < text.length) {
     document.getElementById("typing").innerHTML += text.charAt(i);
     i++;
-    setTimeout(type, 60);
+    setTimeout(type, 50);
   }
 }
 type();
@@ -20,7 +20,7 @@ document.querySelectorAll("a[href^='#']").forEach(anchor => {
   });
 });
 
-// reveal animation
+// reveal
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
@@ -40,3 +40,11 @@ function openModal() {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
+
+// cursor glow
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", e => {
+  cursor.style.top = e.clientY + "px";
+  cursor.style.left = e.clientX + "px";
+});
