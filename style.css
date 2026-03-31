@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
 }
 
 body {
@@ -11,18 +10,6 @@ body {
               radial-gradient(circle at 80% 70%, #00f0ff20, transparent 40%),
               #020617;
   color: white;
-}
-
-/* CURSOR */
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  background: cyan;
-  border-radius: 50%;
-  pointer-events: none;
-  box-shadow: 0 0 20px cyan;
-  transform: translate(-50%, -50%);
 }
 
 /* NAV */
@@ -38,7 +25,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 90vh;
-  gap: 50px;
+  gap: 60px;
 }
 
 .hero-text {
@@ -85,27 +72,39 @@ nav {
   color: cyan;
 }
 
-/* SECTIONS */
+/* SECTION */
 section {
   padding: 100px 40px;
   text-align: center;
 }
 
-/* PROJECTS */
+/* PROJECTS FIXED */
+#projects h2 {
+  margin-bottom: 40px;
+}
+
 .projects-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 40px; /* FIXES OVERLAP */
 }
 
 .card {
   background: rgba(255,255,255,0.05);
-  margin: 20px;
   padding: 20px;
-  width: 300px;
+  width: 320px;
   border-radius: 15px;
   transition: 0.4s;
   cursor: pointer;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
 
 .card:hover {
