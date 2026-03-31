@@ -23,7 +23,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <h1>Building Systems, Not Just Code</h1>
+    <h1>I design backend systems that solve real-world problems.</h1>
     <p id="typing"></p>
 
     <div class="buttons">
@@ -44,7 +44,7 @@
   <div class="projects-container">
 
     <div class="card reveal" onclick="openModal()">
-      <img src="images/project1.png">
+      <img src="images/project1.png" alt="project">
       <h3>Student Management System</h3>
       <p>Java • JDBC • MySQL • Swing</p>
 
@@ -68,15 +68,33 @@
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
+
     <h2>Student Management System</h2>
-    <p>Full desktop system with database integration using Java + MySQL.</p>
-    <a href="https://github.com/satyam2405150" target="_blank">View GitHub</a>
+
+    <p><strong>Problem:</strong><br>
+    Managing student data manually is inefficient and error-prone.</p>
+
+    <p><strong>Solution:</strong><br>
+    Built a complete desktop system using Java, JDBC, and MySQL.</p>
+
+    <p><strong>Key Highlights:</strong></p>
+    <ul>
+      <li>✔ Relational database design</li>
+      <li>✔ Many-to-many relationships</li>
+      <li>✔ Swing UI with JTable</li>
+      <li>✔ JDBC integration</li>
+    </ul>
+
+    <a href="https://github.com/satyam2405150/student-management-system" target="_blank">
+      🔗 View GitHub Project
+    </a>
   </div>
 </div>
 
 <!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
+
   <div class="skills-container reveal">
     <span>Java</span>
     <span>C++</span>
@@ -93,17 +111,17 @@
 <section id="contact">
   <h2>Contact</h2>
 
+  <p class="contact-line">Have an opportunity or idea? Let’s connect.</p>
+
   <div class="contact-card reveal">
-    <p>Email: satyammohanty381@gmail.com</p>
-    <p><a href="https://github.com/satyam2405150">GitHub</a></p>
-    <p><a href="https://www.linkedin.com/in/satyammohantyy/">LinkedIn</a></p>
 
     <form action="https://formspree.io/f/xdapzpez" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Message"></textarea>
-      <button type="submit">Send</button>
+      <textarea name="message" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
     </form>
+
   </div>
 </section>
 
