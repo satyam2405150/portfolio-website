@@ -10,12 +10,15 @@
 
 <body>
 
+<div class="cursor"></div>
+
 <!-- NAV -->
 <nav>
-  <h2 class="logo">Satyam</h2>
+  <h2>Satyam</h2>
   <ul>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -23,7 +26,7 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <h1>Building Systems, Not Just Code</h1>
+    <h1>I design backend systems that actually solve problems.</h1>
     <p id="typing"></p>
 
     <div class="buttons">
@@ -44,20 +47,20 @@
   <div class="projects-container">
 
     <div class="card reveal" onclick="openModal()">
-      <img src="images/project1.png">
+      <img src="images/project1.png" alt="project">
       <h3>Student Management System</h3>
       <p>Java • JDBC • MySQL • Swing</p>
 
       <ul>
-        <li>✔ CRUD operations</li>
-        <li>✔ Attendance system</li>
-        <li>✔ Enrollment logic</li>
+        <li>✔ Full CRUD + database system</li>
+        <li>✔ Attendance tracking with logic</li>
+        <li>✔ Structured DB relationships</li>
       </ul>
     </div>
 
     <div class="card reveal coming">
-      <h3>Next Project</h3>
-      <p>AI / ML based system</p>
+      <h3>AI / ML Project</h3>
+      <p>Building intelligent system</p>
       <span>Coming Soon</span>
     </div>
 
@@ -68,8 +71,23 @@
 <div id="modal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
+
     <h2>Student Management System</h2>
-    <p>Full desktop system with database integration using Java + MySQL.</p>
+
+    <p><strong>Problem:</strong><br>
+    Managing student data manually is inefficient and error-prone.</p>
+
+    <p><strong>Solution:</strong><br>
+    Built a desktop-based system with structured database design and automated workflows.</p>
+
+    <p><strong>Key Highlights:</strong></p>
+    <ul>
+      <li>✔ Designed relational schema with foreign keys</li>
+      <li>✔ Implemented many-to-many relationships</li>
+      <li>✔ Built GUI using Swing (JTable, forms)</li>
+      <li>✔ Integrated backend using JDBC</li>
+    </ul>
+
     <a href="https://github.com/satyam2405150" target="_blank">View GitHub</a>
   </div>
 </div>
@@ -77,6 +95,7 @@
 <!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
+
   <div class="skills-container reveal">
     <span>Java</span>
     <span>C++</span>
@@ -86,12 +105,31 @@
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
+    <span>Python</span>
   </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+
+  <p class="reveal">
+    I'm a BTech CSE student at KIIT focused on backend development and system design.
+    I enjoy building applications that solve real-world problems using structured logic and efficient database design.
+  </p>
+
+  <p class="reveal">
+    Currently, I’m expanding into AI/ML and working towards building intelligent, scalable systems.
+  </p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
+
+  <p class="contact-line">
+    Have an opportunity, idea, or collaboration in mind? Let’s connect.
+  </p>
 
   <div class="contact-card reveal">
     <p>Email: satyammohanty381@gmail.com</p>
@@ -102,7 +140,7 @@
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <textarea name="message" placeholder="Message"></textarea>
-      <button type="submit">Send</button>
+      <button type="submit">Send Message</button>
     </form>
   </div>
 </section>
