@@ -20,7 +20,7 @@ document.querySelectorAll("a[href^='#']").forEach(anchor => {
   });
 });
 
-// reveal
+// reveal animation
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
@@ -31,19 +31,3 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-
-// modal
-function openModal() {
-  document.getElementById("modal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
-
-window.onclick = function(e) {
-  let modal = document.getElementById("modal");
-  if (e.target == modal) {
-    modal.style.display = "none";
-  }
-};
