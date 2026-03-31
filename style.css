@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at 20% 30%, #00f0ff20, transparent 40%),
@@ -45,6 +46,7 @@ nav {
   margin-right: 10px;
 }
 
+/* PROFILE IMAGE */
 .hero-img img {
   width: 260px;
   border-radius: 50%;
@@ -72,13 +74,13 @@ nav {
   color: cyan;
 }
 
-/* SECTION */
+/* SECTIONS */
 section {
   padding: 100px 40px;
   text-align: center;
 }
 
-/* PROJECTS FIXED */
+/* PROJECTS */
 #projects h2 {
   margin-bottom: 40px;
 }
@@ -87,26 +89,29 @@ section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px; /* FIXES OVERLAP */
+  gap: 40px;
 }
 
+/* CARD */
 .card {
   background: rgba(255,255,255,0.05);
   padding: 20px;
   width: 320px;
   border-radius: 15px;
   transition: 0.4s;
-  cursor: pointer;
-  overflow: hidden;
+  overflow: hidden; /* IMPORTANT */
 }
 
+/* FIXED IMAGE HANDLING */
 .card img {
   width: 100%;
-  height: auto;
+  height: 180px;       /* FIX */
+  object-fit: cover;   /* keeps it inside */
   border-radius: 10px;
   display: block;
 }
 
+/* CARD HOVER */
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 0 20px cyan;
