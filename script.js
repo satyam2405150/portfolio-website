@@ -20,7 +20,7 @@ document.querySelectorAll("a[href^='#']").forEach(anchor => {
   });
 });
 
-// reveal
+// reveal animation
 const reveals = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
@@ -40,11 +40,3 @@ function openModal() {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
-
-// cursor glow
-const cursor = document.querySelector(".cursor");
-
-document.addEventListener("mousemove", e => {
-  cursor.style.top = e.clientY + "px";
-  cursor.style.left = e.clientX + "px";
-});
