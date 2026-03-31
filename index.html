@@ -45,14 +45,14 @@
   <div class="projects-container">
 
     <!-- CLICKABLE CARD -->
-    <div class="card reveal" id="projectCard">
+    <div class="card reveal" onclick="openModal()">
       <img src="images/project1.png" alt="project">
       <h3>Student Management System</h3>
       <p>Java • JDBC • MySQL • Swing</p>
 
       <ul>
         <li>✔ Full CRUD + database system</li>
-        <li>✔ Attendance tracking with logic</li>
+        <li>✔ Attendance tracking</li>
         <li>✔ Structured DB relationships</li>
       </ul>
     </div>
@@ -70,7 +70,7 @@
 <div id="modal" class="modal">
   <div class="modal-content">
 
-    <span class="close">&times;</span>
+    <span class="close" onclick="closeModal()">&times;</span>
 
     <h2>Student Management System</h2>
 
@@ -78,7 +78,7 @@
     Managing student data manually is inefficient.</p>
 
     <p><strong>Solution:</strong><br>
-    Built a structured desktop system using Java + MySQL.</p>
+    Built a system using Java + JDBC + MySQL.</p>
 
     <p><strong>Key Highlights:</strong></p>
     <ul>
@@ -87,7 +87,7 @@
       <li>✔ Swing UI + JDBC integration</li>
     </ul>
 
-    <a href="https://github.com/satyam2405150" target="_blank">
+    <a href="https://github.com/satyam2405150/student-management-system" target="_blank">
       🔗 View GitHub Project
     </a>
 
@@ -129,21 +129,10 @@
 <section id="contact">
   <h2>Contact</h2>
 
-  <p class="contact-line">
-    Have an opportunity or idea? Let’s connect.
-  </p>
-
   <div class="contact-card reveal">
     <p>Email: satyammohanty381@gmail.com</p>
     <p><a href="https://github.com/satyam2405150">GitHub</a></p>
     <p><a href="https://www.linkedin.com/in/satyammohantyy/">LinkedIn</a></p>
-
-    <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
   </div>
 </section>
 
