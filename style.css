@@ -19,20 +19,38 @@ nav {
   padding: 20px 60px;
 }
 
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
 /* HERO */
 .hero {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 90vh;
+  gap: 40px;
 }
 
 .hero-text {
   max-width: 500px;
 }
 
+.hero-text h1 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+
 #typing {
   margin: 20px 0;
+  opacity: 0.8;
 }
 
 .hero-img img {
@@ -46,6 +64,9 @@ nav {
   padding: 10px 20px;
   border-radius: 20px;
   text-decoration: none;
+  color: black;
+  margin-right: 10px;
+  transition: 0.3s;
 }
 
 .btn:hover {
@@ -58,6 +79,7 @@ nav {
   padding: 10px 20px;
   border-radius: 20px;
   color: cyan;
+  text-decoration: none;
 }
 
 /* SECTION */
@@ -104,12 +126,31 @@ section {
   border-radius: 20px;
 }
 
+/* ABOUT */
+.about-text {
+  max-width: 700px;
+  margin: 15px auto;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
 /* CONTACT */
 .contact-card {
   max-width: 400px;
   margin: auto;
 }
 
+.social-links {
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: cyan;
+  text-decoration: none;
+}
+
+/* FORM */
 input, textarea {
   width: 100%;
   margin: 10px 0;
@@ -126,36 +167,7 @@ button {
   cursor: pointer;
 }
 
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-  background: #020617;
-  margin: 10% auto;
-  padding: 25px;
-  width: 320px;
-  border-radius: 12px;
-  animation: popUp 0.3s ease;
-}
-
-@keyframes popUp {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-.close {
-  float: right;
-  cursor: pointer;
-}
-
-/* REVEAL */
+/* REVEAL ANIMATION */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -165,4 +177,38 @@ button {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* MOBILE FIX (CRITICAL) */
+@media(max-width: 768px) {
+
+  nav {
+    padding: 15px 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .hero-img img {
+    width: 180px;
+    margin-top: 20px;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
 }
