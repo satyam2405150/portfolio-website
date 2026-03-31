@@ -1,129 +1,42 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+// typing
+const text = "Java Developer • Backend Systems • AI/ML Explorer";
+let i = 0;
+
+function type() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, 60);
+  }
+}
+type();
+
+// smooth scroll
+document.querySelectorAll("a[href^='#']").forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href"))
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+// reveal animation
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+
+// modal
+function openModal() {
+  document.getElementById("modal").style.display = "block";
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: white;
-}
-
-/* NAV */
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 60px;
-}
-
-/* HERO */
-.hero {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 90vh;
-}
-
-.hero-text {
-  max-width: 500px;
-}
-
-#typing {
-  margin: 20px 0;
-}
-
-.profile {
-  width: 250px;
-  border-radius: 50%;
-}
-
-/* BUTTONS */
-.btn {
-  background: cyan;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-}
-
-.btn-outline {
-  border: 1px solid cyan;
-  padding: 10px 20px;
-  border-radius: 20px;
-  color: cyan;
-}
-
-/* PROJECTS */
-section {
-  padding: 80px;
-  text-align: center;
-}
-
-.projects-grid {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-}
-
-.card {
-  width: 260px;
-  background: #1e293b;
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
-
-/* MODAL */
-.modal {
-  display: none;
-  position: fixed;
-  background: rgba(0,0,0,0.8);
-  width: 100%;
-  height: 100%;
-  top: 0;
-}
-
-.modal-box {
-  background: #020617;
-  width: 300px;
-  margin: 150px auto;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.close {
-  float: right;
-  cursor: pointer;
-}
-
-/* SKILLS */
-.skills span {
-  margin: 10px;
-  padding: 10px;
-  background: #334155;
-  display: inline-block;
-  border-radius: 10px;
-}
-
-/* FORM */
-form {
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
 }
